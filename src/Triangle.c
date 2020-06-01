@@ -6,15 +6,7 @@ TriangleType getTriangleType(int side1, int side2, int side3){
 	{
 		return EQUILATERAL;
 	}
-	else if(side1 == side2)
-	{
-		return ISOSCELES;
-	}
-	else if(side1 == side3)
-	{
-		return ISOSCELES;
-	}
-	else if(side2 == side3)
+	else if(side1 == side2 || side1 == side3 || side2 == side3)
 	{
 		return ISOSCELES;
 	}

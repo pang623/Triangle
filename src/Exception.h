@@ -10,7 +10,7 @@ struct Exception {
 	int  freeDataOnFreeingException;
 };
 
-Exception *createException(char *msg, int errorCode);
+ExceptionPtr createException(char *msg, int errorCode);
 void freeException(Exception *e);
 void dumpException(Exception *e);
 

@@ -18,9 +18,18 @@
 
 TriangleType getTriangleType(int side1, int side2, int side3){
 	
-	if(side1 <= 0 || side2 <= 0 || side3 <= 0)
+	if(side1 <= 0)
 	{
-		Throw(ERROR_INVALID_LENGTH);
+		throwException(ERROR_INVALID_LENGTH, NULL, 0, "Side 1 cannot be a value of zero or negative: %d", side1);
+		//Throw(ERROR_INVALID_LENGTH);
+	}
+	if(side2 <= 0)
+	{
+		throwException(ERROR_INVALID_LENGTH, NULL, 0, "Side 2 cannot be a value of zero or negative: %d", side2);
+	}
+	if(side3 <= 0)
+	{
+		throwException(ERROR_INVALID_LENGTH, NULL, 0, "Side 3 cannot be a value of zero or negative: %d", side3);
 	}
 	
 	if(side1 == side2 && side2 == side3)
